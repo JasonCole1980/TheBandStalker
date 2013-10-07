@@ -28,12 +28,6 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     yeoman: yeomanConfig,
-    bower-install: {                                 // INSERT BEGIN
-        target: {                                      //   .
-            html: '<%= yeoman.app %>/index.html',      //   .
-            ignorePath: '<%= yeoman.app %>/'           //   .
-        }                                              //   .
-    },                          
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
@@ -358,7 +352,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer',
+      //'autoprefixer',
       'connect:livereload',
       'open',
       'watch'
@@ -368,7 +362,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'concurrent:test',
-    'autoprefixer',
+    //'autoprefixer',
     'connect:test',
     'karma'
   ]);
@@ -377,7 +371,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    //'autoprefixer',
     'concat',
     'copy:dist',
     'cdnify',
