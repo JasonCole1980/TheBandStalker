@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('wwwApp', [])
+angular.module('bandStalkerApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/greeting.html',
-        controller: 'MainCtrl'
+        controller: 'GreetingCtrl'
       })
       .otherwise({
         redirectTo: '/'
